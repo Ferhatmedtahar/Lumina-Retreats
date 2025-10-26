@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/storage/v1/object/public/canin-images/**",
       },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
