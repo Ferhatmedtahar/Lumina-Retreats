@@ -8,6 +8,7 @@ function Filter() {
 
   const router = useRouter();
   const pathName = usePathname();
+
   function handleFilter(filter) {
     const params = new URLSearchParams(searchParams);
     params.set("capacity", filter);
@@ -15,7 +16,7 @@ function Filter() {
   }
 
   return (
-    <div className="border border-primary-800 ">
+    <div className="border border-primary-800 flex flex-wrap">
       <Button
         filter="all"
         handleFilter={handleFilter}
@@ -28,7 +29,8 @@ function Filter() {
         handleFilter={handleFilter}
         activeFilter={activeFilter}
       >
-        1&mdash;3 guests
+        <span className="hidden sm:inline">1&mdash;3 guests</span>
+        <span className="sm:hidden">1-3</span>
       </Button>
 
       <Button
@@ -36,15 +38,16 @@ function Filter() {
         handleFilter={handleFilter}
         activeFilter={activeFilter}
       >
-        4&mdash;7 guests
+        <span className="hidden sm:inline">4&mdash;7 guests</span>
+        <span className="sm:hidden">4-7</span>
       </Button>
       <Button
         filter="large"
         handleFilter={handleFilter}
         activeFilter={activeFilter}
       >
-        {" "}
-        8&mdash;12 guests
+        <span className="hidden sm:inline">8&mdash;12 guests</span>
+        <span className="sm:hidden">8-12</span>
       </Button>
     </div>
   );
@@ -53,7 +56,7 @@ function Filter() {
 function Button({ filter, handleFilter, activeFilter, children }) {
   return (
     <button
-      className={`px-5 py-2 hover:bg-primary-800 ${
+      className={`px-3 sm:px-5 py-2 hover:bg-primary-800 transition-colors text-sm sm:text-base flex-1 sm:flex-initial whitespace-nowrap ${
         activeFilter === filter ? "bg-primary-700" : ""
       }`}
       onClick={() => handleFilter(filter)}
@@ -62,4 +65,5 @@ function Button({ filter, handleFilter, activeFilter, children }) {
     </button>
   );
 }
+
 export default Filter;
