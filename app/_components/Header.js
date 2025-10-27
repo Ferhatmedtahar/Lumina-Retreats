@@ -1,12 +1,15 @@
-import Navigation from "@/app/_components/Navigation";
 import Logo from "@/app/_components/Logo";
+import Navigation from "@/app/_components/Navigation";
+import { auth } from "@/app/_lib/auth";
 
-function Header() {
+async function Header() {
+  const session = await auth();
+
   return (
-    <header className="border-b border-primary-900 px-8 py-5">
+    <header className="border-b border-primary-900 px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 sticky top-0 bg-primary-950 z-50">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <Logo />
-        <Navigation />
+        <Navigation session={session} />
       </div>
     </header>
   );
