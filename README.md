@@ -16,7 +16,7 @@ It also includes an About page to provide more information about the cabins , an
 - **Cabin Reservation**: Users can browse and reserve available cabins.
 - **User Profile**: Create and manage user profiles to track reservations and personal details.
 - **Authentication**: Secure user authentication with signup, login, and logout features.
-- **About Page**: Provides information about the Wild Oasis project.
+- **About Page**: Provides information about Lumina Retreats project.
 
 ## Installation
 
@@ -48,9 +48,9 @@ It also includes an About page to provide more information about the cabins , an
 
 ### 4. About Page
 
-- **Learn About Wild Oasis**: The About page provides background information on the Wild Oasis project, its mission, and the team behind it. This is a great place to understand the inspiration and goals of the project.
+- **Learn About Wild Oasis**: The About page provides background information on Lumina Retreats project, its mission, and the team behind it. This is a great place to understand the inspiration and goals of the project.
 
-By following these steps, you can fully utilize the features of the Wild Oasis web application.
+By following these steps, you can fully utilize the features of Lumina Retreats web application.
 
 ## Technologies Used
 

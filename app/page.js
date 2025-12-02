@@ -1,6 +1,5 @@
 import background from "@/public/bg.png";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function page() {
   return (
@@ -11,10 +10,10 @@ export default function page() {
         quality={95}
         placeholder="blur"
         alt="Mountains and forests with two cabins"
-        className="object-cover object-top"
+        className="object-cover object-center object-bottom"
       />
 
-      <div className="relative z-10 text-center px-4 sm:px-6">
+      {/* <div className="relative z-10 text-center px-4 sm:px-6">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-primary-50 mb-6 sm:mb-8 md:mb-10 tracking-tight font-normal">
           Welcome to paradise.
         </h1>
@@ -24,7 +23,7 @@ export default function page() {
         >
           Explore luxury cabins
         </Link>
-      </div>
+      </div> */}
     </main>
   );
 }

@@ -8,7 +8,6 @@ export default function Navigation({ session }) {
 
   return (
     <>
-      {/* Burger Button - visible on mobile only */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="z-[60] md:hidden flex flex-col gap-1.5 p-2 relative"
@@ -31,7 +30,6 @@ export default function Navigation({ session }) {
         ></span>
       </button>
 
-      {/* Mobile Menu */}
       <nav
         className={`fixed md:relative top-0 right-0 h-screen md:h-auto w-64 md:w-auto bg-primary-950 md:bg-transparent z-50 md:z-10 text-xl transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full md:translate-x-0"
