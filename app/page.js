@@ -17,8 +17,8 @@ export default function page() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary-950/70 via-primary-950/30 to-transparent" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 pt-24">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-primary-50 mb-6 sm:mb-8 md:mb-10 tracking-tight font-normal drop-shadow-lg">
+      <div className="pb-24 relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-primary-50 mb-6 sm:mb-8  tracking-tight font-normal drop-shadow-lg">
           Welcome to paradise.
         </h1>
 
