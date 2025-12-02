@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <div className="flex-1  grid">
-          <main className="max-w-7xl  mx-auto w-full">
+          <main className=" w-full">
             <ReservationProvider>
               {children}
               <Analytics />

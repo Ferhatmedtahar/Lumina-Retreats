@@ -10,7 +10,7 @@ export default async function Page() {
   const cabins = await getCabins();
 
   return (
-    <div className="px-8 py-12 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-x-24 lg:gap-y-32 text-base lg:text-lg">
+    <div className="max-w-7xl  mx-auto px-8 py-12 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-x-24 lg:gap-y-32 text-base lg:text-lg">
       <div className="lg:col-span-3 order-1">
         <h1 className="text-3xl sm:text-4xl mb-6 lg:mb-10 text-accent-400 font-medium">
           Welcome to Lumina Retreats
