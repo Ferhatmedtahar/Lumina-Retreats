@@ -21,8 +21,6 @@ export async function generateStaticParams() {
     return ids;
   } catch (error) {
     console.error("Error in generateStaticParams:", error);
-    // Return empty array to allow build to continue
-    // Pages will be generated on-demand instead
     return [];
   }
 }
@@ -32,12 +30,15 @@ export default async function Page({ params }) {
   const { name } = cabin;
 
   return (
-    <div className="max-w-6xl mx-auto mt-8">
+    <div className="max-w-6xl mx-auto mt-4 sm:mt-8 px-4 sm:px-8 py-8 sm:py-12">
       <Cabin cabin={cabin} />
+
       <div>
-        <h2 className="text-5xl font-semibold text-center mb-10 text-accent-400">
-          Reserve {name} today. Pay on arrival.
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-6 sm:mb-10 text-accent-300">
+          Reserve {name} today.{" "}
+          <span className="block sm:inline">Pay on arrival.</span>
         </h2>
+
         <Suspense fallback={<Spinner />}>
           <Reservation cabin={cabin} />
         </Suspense>
@@ -45,39 +46,3 @@ export default async function Page({ params }) {
     </div>
   );
 }
-// import Cabin from "@/app/_components/Cabin";
-// import Reservation from "@/app/_components/Reservation";
-// import Spinner from "@/app/_components/Spinner";
-// import { getCabin, getCabins } from "@/app/_lib/data-service";
-// import { Suspense } from "react";
-
-// // NOT GONNA WORK export const metadata = { title: `hello` };
-// export async function generateMetadata({ params }) {
-//   const { name } = await getCabin(params.cabinId);
-//   return { title: `cabin${name}` };
-// }
-
-// export async function generateStaticParams() {
-//   const cabins = await getCabins();
-//   const ids = cabins.map((cabin) => ({ cabinId: String(cabin.id) }));
-//   return ids;
-// }
-
-// export default async function Page({ params }) {
-//   const cabin = await getCabin(params.cabinId);
-//   const { name } = cabin;
-
-//   return (
-//     <div className="max-w-6xl mx-auto mt-8">
-//       <Cabin cabin={cabin} />
-//       <div>
-//         <h2 className="text-5xl font-semibold text-center mb-10 text-accent-400">
-//           Reserve {name} today. Pay on arrival.
-//         </h2>
-//         <Suspense fallback={<Spinner />}>
-//           <Reservation cabin={cabin} />
-//         </Suspense>
-//       </div>
-//     </div>
-//   );
-// }

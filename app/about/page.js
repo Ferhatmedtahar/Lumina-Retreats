@@ -10,8 +10,7 @@ export default async function Page() {
   const cabins = await getCabins();
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-x-24 lg:gap-y-32 text-base lg:text-lg">
-      {/* First Section - Text */}
+    <div className="px-8 py-12 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-x-24 lg:gap-y-32 text-base lg:text-lg">
       <div className="lg:col-span-3 order-1">
         <h1 className="text-3xl sm:text-4xl mb-6 lg:mb-10 text-accent-400 font-medium">
           Welcome to Lumina Retreats
@@ -43,7 +42,6 @@ export default async function Page() {
         </div>
       </div>
 
-      {/* First Section - Image */}
       <div className="lg:col-span-2 order-2">
         <div className="relative h-64 sm:h-80 lg:h-auto lg:aspect-square">
           <Image
@@ -57,7 +55,6 @@ export default async function Page() {
         </div>
       </div>
 
-      {/* Second Section - Image */}
       <div className="lg:col-span-2 order-4 lg:order-3">
         <div className="relative h-64 sm:h-80 lg:h-auto lg:aspect-square">
           <Image
@@ -69,7 +66,6 @@ export default async function Page() {
         </div>
       </div>
 
-      {/* Second Section - Text */}
       <div className="lg:col-span-3 order-3 lg:order-4">
         <h1 className="text-3xl sm:text-4xl mb-6 lg:mb-10 text-accent-400 font-medium">
           Managed by our family since 1962

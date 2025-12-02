@@ -23,21 +23,17 @@ function DateSelector({ settings, cabin, bookedDates }) {
   const { range, setRange, resetRange } = UseReservation();
   const displayRange = isAlreadyBooked(range, bookedDates) ? {} : range;
 
-  // CHANGE
-  // const regularPrice = 23;
-  // const discount = 23;
   const { regularPrice, discount } = cabin;
   const numNights = differenceInDays(range?.to, range?.from);
 
   const cabinPrice = numNights * (regularPrice - discount);
 
-  // SETTINGS
   const { minBookingLength, maxBookingLength } = settings;
 
   return (
     <div className="flex flex-col justify-between">
       <DayPicker
-        className="pt-12 place-self-center"
+        className=" place-self-center px-8 py-12 text-accent-100 "
         mode="range"
         onSelect={setRange}
         selected={displayRange}
@@ -54,7 +50,7 @@ function DateSelector({ settings, cabin, bookedDates }) {
         }
       />
 
-      <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]">
+      <div className="px-8 py-4 flex items-center justify-between  bg-accent-500 text-primary-800 h-[72px]">
         <div className="flex items-baseline gap-6">
           <p className="flex gap-2 items-baseline">
             {discount > 0 ? (

@@ -10,7 +10,7 @@ export default function Page({ searchParams }) {
   const filter = searchParams?.capacity ?? "all";
 
   return (
-    <div>
+    <div className="px-8 py-12">
       <h1 className="text-4xl mb-5  text-center md:text-start  text-accent-400 font-medium">
         Our Luxury Cabins
       </h1>
